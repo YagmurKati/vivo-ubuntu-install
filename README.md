@@ -9,7 +9,7 @@ copy it to the server as `/opt/vivo/vivo/config/runtime.properties`, and keep it
 
 ```bash
 # 1) Clone your repo and enter it
-git clone <your-github-url> vivo-ubuntu-install
+git clone https://github.com/YagmurKati/vivo-ubuntu-install.git
 cd vivo-ubuntu-install
 
 # 2) Run the bootstrap installer
