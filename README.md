@@ -1,4 +1,4 @@
-# VIVO 1.15 Installation on Ubuntu (Tomcat 9 + Solr 9.6.1)
+# VIVO 1.15 Installation (Linux)
 
 This repository packages the configs and scripts to reproduce a working VIVO 1.15 (rel-1.15-maint) install on Ubuntu with Tomcat 9.0.109 and Solr 9.6.1.
 
