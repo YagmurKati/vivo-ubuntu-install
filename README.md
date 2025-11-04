@@ -10,6 +10,27 @@ A detailed step-by-step installation guide (with screenshots) is available:
 
 - [Installation Guide (PDF)](docs/installation-guide.pdf)
 
+## Repository structure
+
+```
+vivo-ubuntu-install/
+├─ README.md
+├─ .gitignore
+├─ docs/
+│  └─ installation-guide.pdf
+├─ config/
+│  ├─ systemd/
+│  │  └─ tomcat9.service
+│  ├─ tomcat/
+│  │  └─ setenv.sh
+│  └─ vivo/
+│     ├─ installer/
+│     │  └─ my-settings.xml
+│     └─ runtime.properties.example
+└─ scripts/
+   └─ bootstrap.sh
+```
+
 ## Requirements
 - OS: Ubuntu 22.04+ (Debian-based; adapt for other distros)
 - Java: OpenJDK **17** (JDK, not JRE)
@@ -60,9 +81,15 @@ After first login, change the password and you should see **Site Admin** in the 
 
 ## Files created on the machine (not committed)
 
-- `/etc/systemd/system/tomcat9.service`
-- `/opt/tomcat9/**`
-- `/opt/vivo/vivo/**`
-- `/opt/tomcat9/webapps/vivo/**`
-- `/opt/solr/**`, `/var/solr/**`
-- Solr core: `vivocore`
+- `/etc/systemd/system/tomcat9.service` — installed from this repo (systemd unit)
+- `/opt/tomcat9/**` — Tomcat 9.0.109 (tarball install)
+- `/opt/tomcat9/webapps/vivo/**` — deployed `vivo.war`
+- `/opt/vivo/vivo/**` — VIVO_HOME (created by Maven installer)
+- `/opt/vivo/vivo/config/runtime.properties` — copied from our example; **edit this**
+- `/opt/solr/**` — Solr binaries (service install)
+- `/var/solr/**` — Solr data and logs
+- `/var/solr/data/vivocore/**` — the VIVO Solr core
+
+**Logs**
+- Tomcat: `/opt/tomcat9/logs/` (e.g., `catalina.out`)
+- Solr: `/var/solr/logs/` (e.g., `solr.log`)
