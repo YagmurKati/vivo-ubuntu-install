@@ -1,0 +1,5 @@
+# system files
+.DS_Store
+
+# never commit live configs with secrets
+config/vivo/runtime.properties

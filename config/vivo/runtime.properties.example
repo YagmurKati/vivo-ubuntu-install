@@ -1,0 +1,20 @@
+# --- Solr endpoints ---
+solrURL=http://localhost:8983/solr/vivocore
+vitro.local.solr.url=http://localhost:8983/solr/vivocore
+
+# --- Base namespace (must end with "individual/") ---
+# Replace <HOST:PORT> or set to your public base URL.
+Vitro.defaultNamespace=http://<HOST:PORT>/vivo/individual/
+
+# --- Argon2 params ---
+argon2.time=3
+argon2.memory=65536
+argon2.parallelism=2
+
+# --- Initial site admin (register with this email) ---
+rootUser.emailAddress=<YOUR_EMAIL@example.org>
+
+# --- Accounts / self-editing ---
+useraccounts.allowSelfRegistration=true
+selfEditing.enabled=true
+selfEditing.useEmailVerification=false
